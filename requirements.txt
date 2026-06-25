@@ -1,0 +1,7 @@
+Flask
+Werkzeug
+Pillow
+numpy
+matplotlib
+requests
+gunicorn
