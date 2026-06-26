@@ -4,7 +4,7 @@ import base64
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
-from flask import Flask, render_template, send_from_directory, request, flash, redirect, url_for
+from flask import Flask, render_template, send_from_directory, request, flash, redirect
 from werkzeug.utils import secure_filename
 import requests
 
