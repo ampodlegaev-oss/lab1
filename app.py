@@ -30,6 +30,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
 def clean_static_folder():
     """Очищает директории static от всех файлов, кроме .keep"""
     folder = app.config['UPLOAD_FOLDER']
@@ -38,6 +39,7 @@ def clean_static_folder():
         # Удаляем все файлы, кроме
         if os.path.isfile(filepath) and filename != '.keep':
             os.remove(filepath)
+
 
 def shift_rectangular_rings(img_array, shift):
     """Выполняет циклический сдвиг пикселей по замкнутым прямоугольным рамкам"""
@@ -83,6 +85,7 @@ def shift_rectangular_rings(img_array, shift):
         right -= 1
 
     return result
+
 
 def generate_histogram(img_array):
     """Строит график распределения цветов RGB"""

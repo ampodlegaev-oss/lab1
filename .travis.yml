@@ -1,0 +1,28 @@
+language: python
+python:
+  - "3.9"
+
+# Установка зависимостей
+install:
+  - pip install -r requirements.txt
+
+# Запуск тестов
+script:
+  - python test_app.py
+
+# Ветки для сборки
+branches:
+  only:
+    - main
+
+# Кеширование для ускорения сборки
+cache:
+  pip: true
+  directories:
+    - $HOME/.cache/pip
+
+# Настройка уведомлений
+notifications:
+  email:
+    on_success: never
+    on_failure: always
