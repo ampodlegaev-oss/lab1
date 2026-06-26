@@ -30,6 +30,14 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+def clean_static_folder():
+    """Очищает директории static от всех файлов, кроме .keep"""
+    folder = app.config['UPLOAD_FOLDER']
+    for filename in os.listdir(folder):
+        filepath = os.path.join(folder, filename)
+        # Удаляем все файлы, кроме
+        if os.path.isfile(filepath) and filename != '.keep':
+            os.remove(filepath)
 
 def shift_rectangular_rings(img_array, shift):
     """Выполняет циклический сдвиг пикселей по замкнутым прямоугольным рамкам"""
@@ -146,6 +154,11 @@ def index():
         # Обработка изображения
         filename = secure_filename(file.filename)
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+
+        # Очищаем static перед сохранением
+        clean_static_folder()
+
+        # Сохраняем новый файл
         file.save(filepath)
 
         img = Image.open(filepath).convert('RGB')
