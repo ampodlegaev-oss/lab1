@@ -13,13 +13,15 @@ app.config['SECRET_KEY'] = 'LabOneTUSUR'
 app.config['UPLOAD_FOLDER'] = 'static'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
-# Настройки reCAPTCHA (тестовые ключи)
 app.config['RECAPTCHA_USE_SSL'] = False
+
+# Настройки reCAPTCHA (тестовые ключи)
 #app.config['RECAPTCHA_PUBLIC_KEY'] = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 #app.config['RECAPTCHA_PRIVATE_KEY'] = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'
 
-app.config['RECAPTCHA_PUBLIC_KEY'] = '6LdLiTYtAAAAAFmOy58UgIbSi5f0wJiyzci6O8G9'
-app.config['RECAPTCHA_PRIVATE_KEY'] = '6LdLiTYtAAAAAHwfLEE09D0ZZyIHCC7GHS7DGomH'
+# Настройки reCAPTCHA (реальные ключи)
+app.config['RECAPTCHA_PUBLIC_KEY'] = '6Lf7ijYtAAAAAC_cnsUZRNJCHwjbnMEGJvQCuEZt'
+app.config['RECAPTCHA_PRIVATE_KEY'] = '6Lf7ijYtAAAAACuVuxVyyt9GoGEgGpTSUFysuMVA'
 
 # Разрешённые расширения
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp'}
