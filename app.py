@@ -9,14 +9,17 @@ from werkzeug.utils import secure_filename
 import requests
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your-secret-key-here'
+app.config['SECRET_KEY'] = 'LabOneTUSUR'
 app.config['UPLOAD_FOLDER'] = 'static'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 # Настройки reCAPTCHA (тестовые ключи)
 app.config['RECAPTCHA_USE_SSL'] = False
-app.config['RECAPTCHA_PUBLIC_KEY'] = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
-app.config['RECAPTCHA_PRIVATE_KEY'] = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'
+#app.config['RECAPTCHA_PUBLIC_KEY'] = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+#app.config['RECAPTCHA_PRIVATE_KEY'] = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'
+
+app.config['RECAPTCHA_PUBLIC_KEY'] = '6LcgaDYtAAAAAJHHms2SsImXEWXE8KrAHljFStuJ'
+app.config['RECAPTCHA_PRIVATE_KEY'] = '6LcgaDYtAAAAADV9qyyrRYa2VoCHc0bJw_S9hV87'
 
 # Разрешённые расширения
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp'}
