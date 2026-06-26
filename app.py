@@ -18,8 +18,8 @@ app.config['RECAPTCHA_USE_SSL'] = False
 #app.config['RECAPTCHA_PUBLIC_KEY'] = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 #app.config['RECAPTCHA_PRIVATE_KEY'] = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'
 
-app.config['RECAPTCHA_PUBLIC_KEY'] = '6LcgaDYtAAAAAJHHms2SsImXEWXE8KrAHljFStuJ'
-app.config['RECAPTCHA_PRIVATE_KEY'] = '6LcgaDYtAAAAADV9qyyrRYa2VoCHc0bJw_S9hV87'
+app.config['RECAPTCHA_PUBLIC_KEY'] = '6LdLiTYtAAAAAFmOy58UgIbSi5f0wJiyzci6O8G9'
+app.config['RECAPTCHA_PRIVATE_KEY'] = '6LdLiTYtAAAAAHwfLEE09D0ZZyIHCC7GHS7DGomH'
 
 # Разрешённые расширения
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp'}
