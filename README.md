@@ -33,3 +33,14 @@ pip install -r requirements.txt
 python app.py
 ```
 Открыть в браузере: http://127.0.0.1:5000
+
+## Тестирование
+```bash
+python test_app.py
+```
+## Деплой
+Приложение доступно по адресу:
+https://web-production-f9145.up.railway.app/
+
+## Автор
+Подлегаев А.М., студент гр. з-434П8-5
