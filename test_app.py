@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-"""
-Автотесты для лабораторной работы №1 (Вариант 20)
-"""
-
 import sys
 import os
 import time
